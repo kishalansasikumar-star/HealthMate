@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "HealthMate",
+    "slug": "healthmate",
+    "version": "1.0.3",
+    "orientation": "portrait",
+    "plugins": [
+      "expo-sqlite",
+      "expo-notifications",
+      "./plugins/android-build.cjs",
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": false,
+          "microphonePermission": false
+        }
+      ]
+    ],
+    "android": {
+      "package": "com.healthmate.journal",
+      "versionCode": 4,
+      "allowBackup": false
+    },
+    "icon": "./assets/healthmate-logo.png",
+    "platforms": [
+      "android"
+    ]
+  }
+}
