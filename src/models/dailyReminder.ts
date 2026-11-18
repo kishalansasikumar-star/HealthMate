@@ -19,7 +19,7 @@ Notifications.setNotificationHandler({
 async function schedule({ id, hour, minute }: Reminder) {
   return Notifications.scheduleNotificationAsync({
     identifier: id,
-    content: { title: "HealthMate", body: "Time for your daily check-in." },
+    content: { title: "HealthMate", body: "Time for your daily check-in.", sound: "default" },
     trigger: { type: Notifications.SchedulableTriggerInputTypes.DAILY, hour, minute, channelId: "daily" },
   });
 }
@@ -28,7 +28,7 @@ export async function saveReminder(previous: Reminder, enabled: boolean, hour: n
   minute: number, persist: (next: Reminder) => Promise<void>) {
   if (enabled) {
     await Notifications.setNotificationChannelAsync("daily", {
-      name: "Daily check-in", importance: Notifications.AndroidImportance.DEFAULT,
+      name: "Daily check-in", importance: Notifications.AndroidImportance.DEFAULT, sound: "default",
     });
     let permission = await Notifications.getPermissionsAsync();
     if (!permission.granted && permission.canAskAgain)
