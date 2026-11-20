@@ -35,7 +35,7 @@ export function EditProfileScreen({ back }: { back: () => void }) {
       // A small JPEG fits in the profile's SQLite row and survives cache cleanup.
       const edit = ImageManipulator.manipulate(chosen.assets[0].uri);
       const thumbnail = await edit
-        .resize({ width: 250, height: 256 })
+        .resize({ width: 256, height: 256 })
         .renderAsync();
       try {
         const image = await thumbnail.saveAsync({
