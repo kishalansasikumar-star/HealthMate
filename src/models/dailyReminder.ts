@@ -1,7 +1,7 @@
 import * as Notifications from "expo-notifications";
 
 export type Reminder = { id: string; hour: number; minute: number };
-export const defaultReminder: Reminder = { id: "", hour: 20, minute: 0 };
+export const defaultReminder: Reminder = { id: "", hour: 24, minute: 0 };
 
 export function readReminder(value?: string): Reminder {
   if (!value) return defaultReminder;
