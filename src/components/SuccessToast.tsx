@@ -50,5 +50,5 @@ const styles = StyleSheet.create({
   overlay: { position: "absolute", alignItems: "center", zIndex: 10 },
   card: { width: "100%", maxWidth: 420, flexDirection: "row", alignItems: "center",
     gap: 12, padding: 14, backgroundColor: "white", borderColor: color.line,
-    borderWidth: 1, borderRadius: 14, elevation: 4 },
+    borderWidth: 1, borderRadius: 16, elevation: 4 },
 });
