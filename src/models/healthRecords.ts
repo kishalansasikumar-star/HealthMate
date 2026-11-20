@@ -8,7 +8,7 @@ export type Draft = Record<Metric | "date", string>;
 export const limits: Amounts = { steps: 100000, calories: 20000, water: 20000 };
 export const initialGoals: Amounts = {
   steps: 10000,
-  calories: 1000,
+  calories: 600,
   water: 2500,
 };
 export const zero: Amounts = { steps: 0, calories: 0, water: 0 };
